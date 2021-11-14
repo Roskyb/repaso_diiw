@@ -1,0 +1,357 @@
+body {
+    line-height: unset !important;
+}
+h1 {
+    font-size: 2.6em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 0.9em;
+}
+
+body {
+    background-color: #34495e;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* HEADER */
+header {
+    padding-top: 1rem;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+header hr.divider {
+    width: 80%;
+    color: blue;
+    border-style: solid;
+}
+
+header .nav-menu {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+header .nav-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+/* MAIN */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+    padding: 1em;
+    justify-content: center;
+    align-content: start;
+    grid-template-areas: 
+    "gato"
+    " alimentacion"
+    "graficos" 
+    "adaptacion"
+    "catus" 
+    "silvestris"
+    "animacion";
+}
+
+section {
+    height: 25em;
+}
+
+#gato {grid-area: gato;}
+#alimentacion {grid-area: alimentacion;}
+#graficos {grid-area: graficos;}
+#adaptacion {grid-area: adaptacion;}
+#catus {grid-area: catus;}
+#silvestris {grid-area: silvestris;}
+#animacion {grid-area: animacion;}
+
+
+
+@media only screen and (min-width: 550px) {
+    main {
+        grid-template-columns: 40% 60%;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "gato alimentacion"
+        "graficos adaptacion"
+        "catus silvestris"
+        ". animacion";
+    }
+
+
+
+
+}
+
+@media only screen and (min-width: 960px) {
+    main {
+        grid-template-columns: 30% 25% 40%;
+        grid-template-rows: 4;
+        grid-template-areas: 
+        "gato catus graficos"
+        "adaptacion catus silvestris"
+        "alimentacion alimentacion alimentacion"
+        "animacion animacion animacion";
+    }
+
+
+}
+
+/* section general  */
+
+section a {
+    text-decoration: none;
+    color: white;
+    background-color: tomato;
+    display: block;
+    width: 100%;
+}
+
+section img {
+    width: 150px;
+}
+
+.header-tipo-1 {
+    color: white;
+    background-color: #3498db;
+    padding: 0.2em;
+}
+
+.header-tipo-2 {
+    background-color: white;
+    border: 3px solid #3498db;
+    padding: 0.2em;
+}
+
+section {
+    background-color: white;
+}
+
+section p {
+    margin: 0 0.5em;
+}
+
+section video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+section .img-container {
+    text-align: center;
+}
+
+/* section 1 */
+
+section:nth-child(1) details {
+    column-count: 2;
+    column-rule: black dotted 1px;
+}
+
+/* section 3 */
+section:nth-child(3) {
+    text-align: center;
+    line-height: 2em;
+}
+section:nth-child(3) img {
+    border-radius: 50%;
+    width: 90%;
+}
+
+#catus {
+    height: 110%;
+}
+
+/* seccion 6 */
+
+section:nth-child(6) img {
+    width: 50%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+section:nth-child(6) p {
+    padding: 1em;
+}
+
+
+
+/* footer */
+
+.footer-divider {
+    width: 90%;
+    color: white;
+    border-style: solid;
+    margin-left: 0;
+}
+footer {
+    display: flex;
+    justify-content: start;
+    gap: 10rem;
+    padding: 1rem;
+}
+footer span {
+    color: #fff;
+}
+
+footer img {
+    width: 10%;
+}
+
+#animacion:hover .gato {
+    -webkit-animation: gato 5s forwards;
+    animation: gato 5s forwards;
+  }
+  
+  #animacion:hover .maullido {
+    -webkit-animation: maullido 5s forwards;
+    animation: maullido 5s forwards;
+  }
+  
+  #animacion .maullido {
+    float: left;
+    visibility: hidden;
+  }
+  
+  #animacion .gato {
+    float: right;
+    -webkit-animation: gato-reverse 5s forwards;
+    animation: gato-reverse 5s forwards;
+  }
+
+
+@-webkit-keyframes gato {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-100vw);
+    }
+  }
+  
+  @keyframes gato {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-100vw);
+    }
+  }
+  
+  @-webkit-keyframes gato-reverse {
+    from {
+      transform: translateX(-100vw);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes gato-reverse {
+    from {
+      transform: translateX(-100vw);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @-webkit-keyframes maullido {
+    90% {
+      visibility: hidden;
+    }
+  
+    100% {
+      visibility: visible;
+    }
+  }
+  
+  @keyframes maullido {
+    90% {
+      visibility: hidden;
+    }
+  
+    100% {
+      visibility: visible;
+    }
+  }
+
+@-webkit-keyframes gato {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes gato {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+@-webkit-keyframes gato-reverse {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes gato-reverse {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes maullido {
+    90% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes maullido {
+    90% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+
